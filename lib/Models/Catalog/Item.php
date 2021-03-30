@@ -29,7 +29,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
  *
  * @author   Stefan Neuhaus / ClouSale
  */
-class Item extends Categories implements ModelInterface, ArrayAccess
+class Item implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 

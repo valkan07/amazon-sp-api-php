@@ -29,7 +29,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
  *
  * @author   Stefan Neuhaus / ClouSale
  */
-class ItemList extends Categories implements ModelInterface, ArrayAccess
+class ItemList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -166,7 +166,7 @@ class ItemList extends Categories implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
@@ -250,5 +250,10 @@ class ItemList extends Categories implements ModelInterface, ArrayAccess
         }
 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
+    }
+
+    public function getSubClass()
+    {
+        return Item::class;
     }
 }

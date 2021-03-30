@@ -30,7 +30,7 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
  *
  * @author   Stefan Neuhaus / ClouSale
  */
-class AttributeSetList extends Categories implements ModelInterface, ArrayAccess, IterableType
+class AttributeSetList implements ModelInterface, ArrayAccess, IterableType
 {
     const DISCRIMINATOR = null;
 
